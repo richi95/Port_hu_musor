@@ -2,8 +2,8 @@
 
 namespace classes;
 
-class Controller extends Queries{
-  
+class Controller extends Queries
+{
 
   public function __construct($connection)
   {
@@ -14,7 +14,6 @@ class Controller extends Queries{
 
   function render()
   {
-    require './views/main.php';
+    require './Views/main.php';
   }
-
 }
