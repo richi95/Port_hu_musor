@@ -1,4 +1,4 @@
-# Port.hu musor lista
+# Port.hu műsorok
 
 - A program futtatásához szükséges importálni a "port_tv.sql" file-t az adatbázisba.
 - Az ".env" file-ban paraméterezzük az adatbázis csatlakozáshoz szükséges egyéni adatokat.
