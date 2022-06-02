@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 1);
-
+//A Nézet renderelése
 spl_autoload_register(function($file){
   require ("$file.php");
 });
@@ -10,6 +10,4 @@ $connection = $init->connection();
 
 $page = new Classes\Controller($connection);
 
-$urlpage = $_GET["page"]??false ? $_GET["page"] : 'render';
-
-$page->$urlpage();
+$page->render();

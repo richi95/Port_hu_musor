@@ -1,6 +1,6 @@
 <?php
 
-namespace classes;
+namespace Classes;
 
 class Controller extends Queries
 {

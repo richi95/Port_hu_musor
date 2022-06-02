@@ -1,6 +1,6 @@
 <?php
 
-namespace classes;
+namespace Classes;
 
 class Queries extends DatabaseSeeder
 {

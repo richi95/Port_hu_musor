@@ -1,15 +1,17 @@
 <?php
 
-namespace classes;
+namespace Classes;
 
 class DatabaseSeeder
 {
-
+    //Napi műsorok feltöltése
     public function seedShows()
     {
         if (isset($_GET['date'])) {
+
             $date = $_GET['date'];
         } else {
+
             $date = date('Y-m-d');
         }
 
@@ -18,8 +20,8 @@ class DatabaseSeeder
         $content = file_get_contents($url);
         $content = json_decode($content);
 
-        if (mysqli_num_rows($this->connection->query("SELECT * FROM musorok")) > 0) {
-            $this->connection->query("TRUNCATE TABLE musorok");
+        if (mysqli_num_rows($this->connection->query("SELECT * FROM `musorok`")) > 0) {
+            $this->connection->query("TRUNCATE TABLE `musorok`");
         }
 
         foreach ($content->channels as $channel) {
@@ -35,7 +37,7 @@ class DatabaseSeeder
                 $channel_date = strtotime($content->date_from);
                 $channel_date = date('Y-m-d', $channel_date);
 
-                $this->connection->query("INSERT INTO musorok (csatorna_neve, musor_kezdete, musor_cime, rovid_leiras, korhatar, datum) 
+                $this->connection->query("INSERT INTO `musorok` (csatorna_neve, musor_kezdete, musor_cime, rovid_leiras, korhatar, datum) 
                 VALUES ('$channel_name', '$show_start', '$show_title', '$description', '$age_limit', '$channel_date')");
             }
         }

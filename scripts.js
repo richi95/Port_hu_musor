@@ -1,3 +1,4 @@
+//datum kiválasztásakor 
 const date = document.getElementById("date");
 let url = "http://localhost/webprog/php/portmusor2/index.php";
 
