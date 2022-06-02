@@ -1,4 +1,4 @@
-//datum kiválasztásakor 
+//Az aktuális URL-t paraméterezi a kiválasztott dátummal 
 const date = document.getElementById("date");
 let url = "http://localhost/webprog/php/portmusor2/index.php";
 
