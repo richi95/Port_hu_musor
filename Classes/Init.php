@@ -7,7 +7,7 @@ class Init
     function __construct()
     {
         $dbconfig = parse_ini_file(".env");
-
+        
         $this->host = $dbconfig["DB_HOST"];
         $this->username = $dbconfig["DB_USERNAME"];
         $this->password = $dbconfig["DB_PASSWORD"];
